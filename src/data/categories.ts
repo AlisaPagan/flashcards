@@ -7,6 +7,9 @@ export const categories: Category[] = [
   { id: 'react', label: 'React', shortLabel: 'React' },
   { id: 'next', label: 'Next.js', shortLabel: 'Next' },
   { id: 'node', label: 'Node.js', shortLabel: 'Node' },
+  { id: 'web-api', label: 'Web / API', shortLabel: 'Web/API' },
+  { id: 'database', label: 'Database', shortLabel: 'DB' },
+  { id: 'general-dev', label: 'General Dev', shortLabel: 'General' },
 ];
 
 export const sessionCategories: { id: SessionCategory; label: string }[] = [

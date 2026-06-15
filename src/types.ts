@@ -1,4 +1,13 @@
-export type CategoryId = 'html-css' | 'javascript' | 'typescript' | 'react' | 'next' | 'node';
+export type CategoryId =
+  | 'html-css'
+  | 'javascript'
+  | 'typescript'
+  | 'react'
+  | 'next'
+  | 'node'
+  | 'web-api'
+  | 'database'
+  | 'general-dev';
 
 export type SessionCategory = CategoryId | 'mixed';
 

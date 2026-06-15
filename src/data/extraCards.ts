@@ -3103,4 +3103,2448 @@ export const extraCards: Flashcard[] = [
     },
     "source": "Interview-ready HTML/CSS theory"
   },
+  {
+    "id": "webapi-001",
+    "category": "web-api",
+    "question": "What is the DOM?",
+    "answer": "The DOM, or Document Object Model, is the browser's programming representation of an HTML document. It turns page markup into a tree of nodes that JavaScript can read, change, add to, or remove from.",
+    "keywords": [
+      "Document Object Model",
+      "browser",
+      "HTML document",
+      "tree",
+      "nodes",
+      "JavaScript"
+    ],
+    "aliases": {
+      "Document Object Model": [
+        "dom"
+      ],
+      "browser": [
+        "web browser"
+      ],
+      "HTML document": [
+        "html page",
+        "document"
+      ],
+      "tree": [
+        "node tree"
+      ],
+      "nodes": [
+        "elements"
+      ],
+      "JavaScript": [
+        "js"
+      ]
+    },
+    "source": "Interview-ready Web/API theory"
+  },
+  {
+    "id": "webapi-002",
+    "category": "web-api",
+    "question": "What is the BOM?",
+    "answer": "The BOM, or Browser Object Model, is the set of browser-provided objects outside the document itself. It includes things like window, navigator, location, history, screen, and timers. The BOM lets JavaScript interact with the browser environment.",
+    "keywords": [
+      "Browser Object Model",
+      "window",
+      "navigator",
+      "location",
+      "history",
+      "browser environment"
+    ],
+    "aliases": {
+      "Browser Object Model": [
+        "bom"
+      ],
+      "window": [
+        "window object"
+      ],
+      "navigator": [
+        "navigator object"
+      ],
+      "location": [
+        "url location"
+      ],
+      "history": [
+        "browser history"
+      ],
+      "browser environment": [
+        "browser api"
+      ]
+    },
+    "source": "Interview-ready Web/API theory"
+  },
+  {
+    "id": "webapi-003",
+    "category": "web-api",
+    "question": "What is event bubbling?",
+    "answer": "Event bubbling is when an event starts on the target element and then moves upward through its parent elements. For example, a click on a button can also be handled by its parent div or the document unless propagation is stopped.",
+    "keywords": [
+      "event",
+      "target element",
+      "moves upward",
+      "parent elements",
+      "propagation"
+    ],
+    "aliases": {
+      "event": [
+        "browser event"
+      ],
+      "target element": [
+        "event target"
+      ],
+      "moves upward": [
+        "bubbles up"
+      ],
+      "parent elements": [
+        "ancestors"
+      ],
+      "propagation": [
+        "event propagation"
+      ]
+    },
+    "source": "Interview-ready Web/API theory"
+  },
+  {
+    "id": "webapi-004",
+    "category": "web-api",
+    "question": "What is event capturing?",
+    "answer": "Event capturing is the phase where an event travels from the window or document down toward the target element before the bubbling phase. It is less commonly used, but you can listen during capture by passing the capture option to addEventListener.",
+    "keywords": [
+      "window",
+      "document",
+      "down toward target",
+      "before bubbling",
+      "capture option"
+    ],
+    "aliases": {
+      "window": [
+        "browser window"
+      ],
+      "document": [
+        "document object"
+      ],
+      "down toward target": [
+        "capturing phase"
+      ],
+      "before bubbling": [
+        "before bubble phase"
+      ],
+      "capture option": [
+        "useCapture",
+        "capture true"
+      ]
+    },
+    "source": "Interview-ready Web/API theory"
+  },
+  {
+    "id": "webapi-005",
+    "category": "web-api",
+    "question": "What is the difference between preventDefault and stopPropagation?",
+    "answer": "preventDefault stops the browser's default behavior, such as submitting a form or following a link. stopPropagation stops the event from continuing through the capturing or bubbling phases. They solve different problems and are often confused.",
+    "keywords": [
+      "preventDefault",
+      "default behavior",
+      "stopPropagation",
+      "event propagation",
+      "bubbling"
+    ],
+    "aliases": {
+      "preventDefault": [
+        "prevent default"
+      ],
+      "default behavior": [
+        "browser default"
+      ],
+      "stopPropagation": [
+        "stop propagation"
+      ],
+      "event propagation": [
+        "propagation"
+      ],
+      "bubbling": [
+        "bubble"
+      ]
+    },
+    "source": "Interview-ready Web/API theory"
+  },
+  {
+    "id": "webapi-006",
+    "category": "web-api",
+    "question": "What is event delegation?",
+    "answer": "Event delegation is a pattern where you attach one event listener to a parent element instead of many listeners to child elements. Because events bubble, the parent can inspect the event target and respond to clicks or changes from its children.",
+    "keywords": [
+      "one listener",
+      "parent element",
+      "child elements",
+      "bubbling",
+      "event target"
+    ],
+    "aliases": {
+      "one listener": [
+        "single listener"
+      ],
+      "parent element": [
+        "parent"
+      ],
+      "child elements": [
+        "children"
+      ],
+      "bubbling": [
+        "event bubbling"
+      ],
+      "event target": [
+        "target"
+      ]
+    },
+    "source": "Interview-ready Web/API theory"
+  },
+  {
+    "id": "webapi-007",
+    "category": "web-api",
+    "question": "What is the difference between localStorage, sessionStorage, and cookies?",
+    "answer": "localStorage stores data in the browser with no automatic expiration. sessionStorage stores data only for the current tab session. Cookies are small pieces of data sent with HTTP requests to matching domains and can have options like expiration, HttpOnly, Secure, and SameSite.",
+    "keywords": [
+      "localStorage",
+      "sessionStorage",
+      "cookies",
+      "HTTP requests",
+      "expiration",
+      "HttpOnly"
+    ],
+    "aliases": {
+      "localStorage": [
+        "local storage"
+      ],
+      "sessionStorage": [
+        "session storage"
+      ],
+      "cookies": [
+        "cookie"
+      ],
+      "HTTP requests": [
+        "sent with requests"
+      ],
+      "expiration": [
+        "expires"
+      ],
+      "HttpOnly": [
+        "http only"
+      ]
+    },
+    "source": "Interview-ready Web/API theory"
+  },
+  {
+    "id": "webapi-008",
+    "category": "web-api",
+    "question": "What is the difference between HTTP and HTTPS?",
+    "answer": "HTTP is the protocol used for communication between clients and servers. HTTPS is HTTP over TLS, which encrypts the connection and helps protect data from being read or modified in transit. HTTPS also helps verify that the client is talking to the expected server.",
+    "keywords": [
+      "HTTP",
+      "HTTPS",
+      "TLS",
+      "encrypts",
+      "in transit",
+      "verify server"
+    ],
+    "aliases": {
+      "HTTP": [
+        "http protocol"
+      ],
+      "HTTPS": [
+        "secure http"
+      ],
+      "TLS": [
+        "ssl",
+        "transport layer security"
+      ],
+      "encrypts": [
+        "encryption"
+      ],
+      "in transit": [
+        "during transfer"
+      ],
+      "verify server": [
+        "certificate"
+      ]
+    },
+    "source": "Interview-ready Web/API theory"
+  },
+  {
+    "id": "webapi-009",
+    "category": "web-api",
+    "question": "What are common HTTP methods and what are they used for?",
+    "answer": "GET usually reads data. POST usually creates data or starts an action. PUT usually replaces a resource. PATCH usually updates part of a resource. DELETE removes a resource. The exact behavior depends on the API design, but these are common REST conventions.",
+    "keywords": [
+      "GET",
+      "POST",
+      "PUT",
+      "PATCH",
+      "DELETE",
+      "REST"
+    ],
+    "aliases": {
+      "GET": [
+        "read"
+      ],
+      "POST": [
+        "create"
+      ],
+      "PUT": [
+        "replace"
+      ],
+      "PATCH": [
+        "partial update"
+      ],
+      "DELETE": [
+        "remove"
+      ],
+      "REST": [
+        "rest convention"
+      ]
+    },
+    "source": "Interview-ready Web/API theory"
+  },
+  {
+    "id": "webapi-010",
+    "category": "web-api",
+    "question": "What are common HTTP status code groups?",
+    "answer": "2xx status codes mean success. 3xx means redirection. 4xx means the client likely made a bad request or lacks permission. 5xx means a server-side error happened. Common examples are 200 OK, 201 Created, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, and 500 Server Error.",
+    "keywords": [
+      "2xx",
+      "3xx",
+      "4xx",
+      "5xx",
+      "401",
+      "404",
+      "500"
+    ],
+    "aliases": {
+      "2xx": [
+        "success"
+      ],
+      "3xx": [
+        "redirect"
+      ],
+      "4xx": [
+        "client error"
+      ],
+      "5xx": [
+        "server error"
+      ],
+      "401": [
+        "unauthorized"
+      ],
+      "404": [
+        "not found"
+      ],
+      "500": [
+        "internal server error"
+      ]
+    },
+    "source": "Interview-ready Web/API theory"
+  },
+  {
+    "id": "webapi-011",
+    "category": "web-api",
+    "question": "What happens in a basic request-response cycle?",
+    "answer": "The client sends an HTTP request with a method, URL, headers, and sometimes a body. The server receives it, runs routing and application logic, then sends back an HTTP response with a status code, headers, and often a response body.",
+    "keywords": [
+      "client",
+      "HTTP request",
+      "method",
+      "headers",
+      "server",
+      "response",
+      "status code"
+    ],
+    "aliases": {
+      "client": [
+        "browser",
+        "frontend"
+      ],
+      "HTTP request": [
+        "request"
+      ],
+      "method": [
+        "GET",
+        "POST"
+      ],
+      "headers": [
+        "http headers"
+      ],
+      "server": [
+        "backend"
+      ],
+      "response": [
+        "http response"
+      ],
+      "status code": [
+        "status"
+      ]
+    },
+    "source": "Interview-ready Web/API theory"
+  },
+  {
+    "id": "webapi-012",
+    "category": "web-api",
+    "question": "What are HTTP headers?",
+    "answer": "HTTP headers are key-value metadata sent with requests and responses. They can describe content type, authorization, caching, cookies, accepted formats, CORS rules, and other information that controls how the client and server communicate.",
+    "keywords": [
+      "key-value",
+      "metadata",
+      "requests",
+      "responses",
+      "content type",
+      "authorization",
+      "caching"
+    ],
+    "aliases": {
+      "key-value": [
+        "key value pairs"
+      ],
+      "metadata": [
+        "meta information"
+      ],
+      "requests": [
+        "request headers"
+      ],
+      "responses": [
+        "response headers"
+      ],
+      "content type": [
+        "Content-Type"
+      ],
+      "authorization": [
+        "Authorization header"
+      ],
+      "caching": [
+        "cache-control"
+      ]
+    },
+    "source": "Interview-ready Web/API theory"
+  },
+  {
+    "id": "webapi-013",
+    "category": "web-api",
+    "question": "What is JSON and why is it common in web APIs?",
+    "answer": "JSON, or JavaScript Object Notation, is a text format for structured data. It is common in web APIs because it is readable, language-independent, easy to parse, and maps naturally to objects and arrays used in JavaScript applications.",
+    "keywords": [
+      "JavaScript Object Notation",
+      "text format",
+      "structured data",
+      "web APIs",
+      "parse",
+      "objects"
+    ],
+    "aliases": {
+      "JavaScript Object Notation": [
+        "json"
+      ],
+      "text format": [
+        "string format"
+      ],
+      "structured data": [
+        "data"
+      ],
+      "web APIs": [
+        "api"
+      ],
+      "parse": [
+        "JSON.parse"
+      ],
+      "objects": [
+        "arrays"
+      ]
+    },
+    "source": "Interview-ready Web/API theory"
+  },
+  {
+    "id": "webapi-014",
+    "category": "web-api",
+    "question": "What is REST?",
+    "answer": "REST is an architectural style for designing APIs around resources. In a REST-style API, URLs usually represent resources, HTTP methods describe actions, status codes describe results, and data is often exchanged as JSON.",
+    "keywords": [
+      "architectural style",
+      "resources",
+      "URLs",
+      "HTTP methods",
+      "status codes",
+      "JSON"
+    ],
+    "aliases": {
+      "architectural style": [
+        "api style"
+      ],
+      "resources": [
+        "resource"
+      ],
+      "URLs": [
+        "endpoints"
+      ],
+      "HTTP methods": [
+        "GET",
+        "POST",
+        "PUT",
+        "DELETE"
+      ],
+      "status codes": [
+        "http status"
+      ],
+      "JSON": [
+        "json data"
+      ]
+    },
+    "source": "Interview-ready Web/API theory"
+  },
+  {
+    "id": "webapi-015",
+    "category": "web-api",
+    "question": "What is an endpoint?",
+    "answer": "An endpoint is a specific URL in an API that a client can request. It usually represents a resource or an action, such as GET /users, POST /login, or DELETE /posts/:id. The endpoint plus the HTTP method tells the server what the client wants.",
+    "keywords": [
+      "URL",
+      "API",
+      "resource",
+      "action",
+      "HTTP method",
+      "server"
+    ],
+    "aliases": {
+      "URL": [
+        "route",
+        "path"
+      ],
+      "API": [
+        "backend api"
+      ],
+      "resource": [
+        "data resource"
+      ],
+      "action": [
+        "operation"
+      ],
+      "HTTP method": [
+        "method"
+      ],
+      "server": [
+        "backend"
+      ]
+    },
+    "source": "Interview-ready Web/API theory"
+  },
+  {
+    "id": "webapi-016",
+    "category": "web-api",
+    "question": "What is CORS?",
+    "answer": "CORS, or Cross-Origin Resource Sharing, is a browser security mechanism that controls whether a frontend from one origin can read responses from another origin. The server must send the right headers to allow trusted origins, methods, and credentials.",
+    "keywords": [
+      "Cross-Origin Resource Sharing",
+      "browser security",
+      "origin",
+      "read responses",
+      "server headers",
+      "credentials"
+    ],
+    "aliases": {
+      "Cross-Origin Resource Sharing": [
+        "cors"
+      ],
+      "browser security": [
+        "security mechanism"
+      ],
+      "origin": [
+        "cross origin"
+      ],
+      "read responses": [
+        "access response"
+      ],
+      "server headers": [
+        "cors headers"
+      ],
+      "credentials": [
+        "cookies",
+        "withCredentials"
+      ]
+    },
+    "source": "Interview-ready Web/API theory"
+  },
+  {
+    "id": "webapi-017",
+    "category": "web-api",
+    "question": "What is a CORS preflight request?",
+    "answer": "A CORS preflight is an OPTIONS request the browser sends before some cross-origin requests. It asks the server whether the actual request is allowed. Preflight often happens with non-simple methods, custom headers, or certain content types.",
+    "keywords": [
+      "OPTIONS request",
+      "browser",
+      "cross-origin",
+      "allowed",
+      "custom headers",
+      "content types"
+    ],
+    "aliases": {
+      "OPTIONS request": [
+        "options method"
+      ],
+      "browser": [
+        "web browser"
+      ],
+      "cross-origin": [
+        "cors"
+      ],
+      "allowed": [
+        "permission"
+      ],
+      "custom headers": [
+        "non simple headers"
+      ],
+      "content types": [
+        "Content-Type"
+      ]
+    },
+    "source": "Interview-ready Web/API theory"
+  },
+  {
+    "id": "webapi-018",
+    "category": "web-api",
+    "question": "What is the difference between fetch and Axios?",
+    "answer": "fetch is a built-in browser API for making HTTP requests. Axios is a third-party library that wraps request handling with features like automatic JSON transformation, interceptors, request cancellation helpers, and easier error handling in some cases. Both can be used to call APIs.",
+    "keywords": [
+      "fetch",
+      "built-in",
+      "Axios",
+      "third-party",
+      "interceptors",
+      "error handling"
+    ],
+    "aliases": {
+      "fetch": [
+        "fetch api"
+      ],
+      "built-in": [
+        "browser api"
+      ],
+      "Axios": [
+        "axios library"
+      ],
+      "third-party": [
+        "external library"
+      ],
+      "interceptors": [
+        "request interceptors"
+      ],
+      "error handling": [
+        "errors"
+      ]
+    },
+    "source": "Interview-ready Web/API theory"
+  },
+  {
+    "id": "webapi-019",
+    "category": "web-api",
+    "question": "What is the difference between query parameters and route parameters?",
+    "answer": "Route parameters are part of the path and usually identify a specific resource, like /users/123. Query parameters come after the question mark and usually modify the request, such as ?page=2 or ?sort=name. APIs use both for different kinds of information.",
+    "keywords": [
+      "route parameters",
+      "path",
+      "specific resource",
+      "query parameters",
+      "question mark",
+      "modify request"
+    ],
+    "aliases": {
+      "route parameters": [
+        "path params",
+        "url params"
+      ],
+      "path": [
+        "url path"
+      ],
+      "specific resource": [
+        "resource id"
+      ],
+      "query parameters": [
+        "query params"
+      ],
+      "question mark": [
+        "?"
+      ],
+      "modify request": [
+        "filter",
+        "sort",
+        "pagination"
+      ]
+    },
+    "source": "Interview-ready Web/API theory"
+  },
+  {
+    "id": "webapi-020",
+    "category": "web-api",
+    "question": "What is browser caching?",
+    "answer": "Browser caching stores downloaded resources or responses so the browser can reuse them instead of requesting them again. It improves performance and reduces network traffic. Caching behavior can be controlled with headers such as Cache-Control, ETag, and Expires.",
+    "keywords": [
+      "stores resources",
+      "reuse",
+      "performance",
+      "network traffic",
+      "Cache-Control",
+      "ETag"
+    ],
+    "aliases": {
+      "stores resources": [
+        "cache resources"
+      ],
+      "reuse": [
+        "use again"
+      ],
+      "performance": [
+        "faster"
+      ],
+      "network traffic": [
+        "less network"
+      ],
+      "Cache-Control": [
+        "cache control"
+      ],
+      "ETag": [
+        "entity tag"
+      ]
+    },
+    "source": "Interview-ready Web/API theory"
+  },
+  {
+    "id": "webapi-021",
+    "category": "web-api",
+    "question": "What is the browser rendering process at a high level?",
+    "answer": "At a high level, the browser parses HTML into the DOM, parses CSS into the CSSOM, combines them into a render tree, calculates layout, paints pixels, and composites layers. JavaScript can affect this process by changing the DOM or styles.",
+    "keywords": [
+      "DOM",
+      "CSSOM",
+      "render tree",
+      "layout",
+      "paint",
+      "composite"
+    ],
+    "aliases": {
+      "DOM": [
+        "document object model"
+      ],
+      "CSSOM": [
+        "css object model"
+      ],
+      "render tree": [
+        "rendering tree"
+      ],
+      "layout": [
+        "reflow"
+      ],
+      "paint": [
+        "repaint"
+      ],
+      "composite": [
+        "compositing"
+      ]
+    },
+    "source": "Interview-ready Web/API theory"
+  },
+  {
+    "id": "webapi-022",
+    "category": "web-api",
+    "question": "What is the critical rendering path?",
+    "answer": "The critical rendering path is the sequence of steps the browser must complete to turn HTML, CSS, and JavaScript into pixels on the screen. Optimizing it means reducing render-blocking resources, loading important CSS early, and avoiding unnecessary blocking JavaScript.",
+    "keywords": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "pixels",
+      "render-blocking",
+      "important CSS"
+    ],
+    "aliases": {
+      "HTML": [
+        "html document"
+      ],
+      "CSS": [
+        "styles"
+      ],
+      "JavaScript": [
+        "js"
+      ],
+      "pixels": [
+        "screen"
+      ],
+      "render-blocking": [
+        "blocking resources"
+      ],
+      "important CSS": [
+        "critical css"
+      ]
+    },
+    "source": "Interview-ready Web/API theory"
+  },
+  {
+    "id": "webapi-023",
+    "category": "web-api",
+    "question": "What is a CDN and why is it useful?",
+    "answer": "A CDN, or Content Delivery Network, is a network of servers that deliver assets from locations closer to users. It can reduce latency, improve load speed, handle traffic better, and cache static assets such as images, CSS, JavaScript, and fonts.",
+    "keywords": [
+      "Content Delivery Network",
+      "closer to users",
+      "latency",
+      "load speed",
+      "cache",
+      "static assets"
+    ],
+    "aliases": {
+      "Content Delivery Network": [
+        "cdn"
+      ],
+      "closer to users": [
+        "near users"
+      ],
+      "latency": [
+        "delay"
+      ],
+      "load speed": [
+        "performance"
+      ],
+      "cache": [
+        "caching"
+      ],
+      "static assets": [
+        "images",
+        "css",
+        "javascript",
+        "fonts"
+      ]
+    },
+    "source": "Interview-ready Web/API theory"
+  },
+  {
+    "id": "webapi-024",
+    "category": "web-api",
+    "question": "What is the difference between a SPA and a multi-page application?",
+    "answer": "A SPA, or Single Page Application, loads one main HTML page and updates the UI with JavaScript as users navigate. A multi-page application loads a new HTML document from the server for many navigations. SPAs can feel fast after initial load, but need careful routing, loading, SEO, and performance handling.",
+    "keywords": [
+      "Single Page Application",
+      "one HTML page",
+      "JavaScript navigation",
+      "multi-page",
+      "new HTML document",
+      "SEO"
+    ],
+    "aliases": {
+      "Single Page Application": [
+        "spa"
+      ],
+      "one HTML page": [
+        "single page"
+      ],
+      "JavaScript navigation": [
+        "client-side routing"
+      ],
+      "multi-page": [
+        "mpa"
+      ],
+      "new HTML document": [
+        "full page load"
+      ],
+      "SEO": [
+        "search engines"
+      ]
+    },
+    "source": "Interview-ready Web/API theory"
+  },
+  {
+    "id": "webapi-025",
+    "category": "web-api",
+    "question": "What is URL anatomy?",
+    "answer": "A URL can include a protocol, domain, port, path, query string, and fragment. For example, https is the protocol, example.com is the domain, /products/1 is the path, ?tab=reviews is the query string, and #details is the fragment.",
+    "keywords": [
+      "protocol",
+      "domain",
+      "port",
+      "path",
+      "query string",
+      "fragment"
+    ],
+    "aliases": {
+      "protocol": [
+        "scheme",
+        "https"
+      ],
+      "domain": [
+        "host"
+      ],
+      "port": [
+        "port number"
+      ],
+      "path": [
+        "pathname"
+      ],
+      "query string": [
+        "query params"
+      ],
+      "fragment": [
+        "hash",
+        "anchor"
+      ]
+    },
+    "source": "Interview-ready Web/API theory"
+  },
+  {
+    "id": "database-001",
+    "category": "database",
+    "question": "What is the difference between SQL and NoSQL databases?",
+    "answer": "SQL databases are usually relational, table-based, and use structured schemas with SQL queries. NoSQL databases are a broader group that can store data as documents, key-value pairs, graphs, or wide columns. MongoDB is a document NoSQL database. The choice depends on data shape, relationships, consistency needs, and query patterns.",
+    "keywords": [
+      "SQL",
+      "relational",
+      "tables",
+      "NoSQL",
+      "documents",
+      "MongoDB"
+    ],
+    "aliases": {
+      "SQL": [
+        "sql database"
+      ],
+      "relational": [
+        "relations"
+      ],
+      "tables": [
+        "table based"
+      ],
+      "NoSQL": [
+        "non relational"
+      ],
+      "documents": [
+        "document database"
+      ],
+      "MongoDB": [
+        "mongo"
+      ]
+    },
+    "source": "Interview-ready Database/MongoDB theory"
+  },
+  {
+    "id": "database-002",
+    "category": "database",
+    "question": "What is a document database?",
+    "answer": "A document database stores data as document-like records, often similar to JSON. In MongoDB, documents are BSON objects with fields and values. This structure works well when related data can naturally live together inside one document.",
+    "keywords": [
+      "document database",
+      "records",
+      "JSON",
+      "BSON",
+      "fields",
+      "related data"
+    ],
+    "aliases": {
+      "document database": [
+        "document db"
+      ],
+      "records": [
+        "documents"
+      ],
+      "JSON": [
+        "json-like"
+      ],
+      "BSON": [
+        "binary json"
+      ],
+      "fields": [
+        "properties"
+      ],
+      "related data": [
+        "nested data"
+      ]
+    },
+    "source": "Interview-ready Database/MongoDB theory"
+  },
+  {
+    "id": "database-003",
+    "category": "database",
+    "question": "What is the difference between a collection and a document in MongoDB?",
+    "answer": "A collection is a group of MongoDB documents, similar to a table in a relational database. A document is a single record inside a collection, similar to a row but more flexible because it can contain nested objects and arrays.",
+    "keywords": [
+      "collection",
+      "group",
+      "documents",
+      "single record",
+      "nested objects",
+      "arrays"
+    ],
+    "aliases": {
+      "collection": [
+        "mongo collection"
+      ],
+      "group": [
+        "group of documents"
+      ],
+      "documents": [
+        "mongo documents"
+      ],
+      "single record": [
+        "record"
+      ],
+      "nested objects": [
+        "nested data"
+      ],
+      "arrays": [
+        "array fields"
+      ]
+    },
+    "source": "Interview-ready Database/MongoDB theory"
+  },
+  {
+    "id": "database-004",
+    "category": "database",
+    "question": "What is ObjectId in MongoDB?",
+    "answer": "ObjectId is the default unique identifier type MongoDB uses for the _id field. It is usually generated automatically when a document is created. ObjectId values are unique enough for distributed systems and include timestamp information.",
+    "keywords": [
+      "ObjectId",
+      "_id",
+      "unique identifier",
+      "generated automatically",
+      "timestamp"
+    ],
+    "aliases": {
+      "ObjectId": [
+        "object id"
+      ],
+      "_id": [
+        "id field"
+      ],
+      "unique identifier": [
+        "unique id"
+      ],
+      "generated automatically": [
+        "auto generated"
+      ],
+      "timestamp": [
+        "created time"
+      ]
+    },
+    "source": "Interview-ready Database/MongoDB theory"
+  },
+  {
+    "id": "database-005",
+    "category": "database",
+    "question": "What is CRUD?",
+    "answer": "CRUD stands for Create, Read, Update, and Delete. These are the basic operations most apps perform on stored data. In an API, they often map to POST, GET, PUT or PATCH, and DELETE, though exact design can vary.",
+    "keywords": [
+      "Create",
+      "Read",
+      "Update",
+      "Delete",
+      "stored data",
+      "API"
+    ],
+    "aliases": {
+      "Create": [
+        "insert",
+        "add"
+      ],
+      "Read": [
+        "get",
+        "find"
+      ],
+      "Update": [
+        "edit",
+        "modify"
+      ],
+      "Delete": [
+        "remove"
+      ],
+      "stored data": [
+        "database data"
+      ],
+      "API": [
+        "REST API"
+      ]
+    },
+    "source": "Interview-ready Database/MongoDB theory"
+  },
+  {
+    "id": "database-006",
+    "category": "database",
+    "question": "What is Mongoose?",
+    "answer": "Mongoose is an ODM, or Object Data Modeling library, for MongoDB and Node.js. It lets you define schemas and models, validate data, run queries, and work with MongoDB documents in a more structured way from JavaScript or TypeScript.",
+    "keywords": [
+      "ODM",
+      "MongoDB",
+      "Node.js",
+      "schemas",
+      "models",
+      "validate"
+    ],
+    "aliases": {
+      "ODM": [
+        "object data modeling"
+      ],
+      "MongoDB": [
+        "mongo"
+      ],
+      "Node.js": [
+        "node"
+      ],
+      "schemas": [
+        "schema"
+      ],
+      "models": [
+        "model"
+      ],
+      "validate": [
+        "validation"
+      ]
+    },
+    "source": "Interview-ready Database/MongoDB theory"
+  },
+  {
+    "id": "database-007",
+    "category": "database",
+    "question": "What is a Mongoose schema?",
+    "answer": "A Mongoose schema defines the shape of documents in a collection. It can specify field names, types, required fields, defaults, validation rules, indexes, and relationships. The schema becomes the blueprint for a Mongoose model.",
+    "keywords": [
+      "shape",
+      "documents",
+      "field names",
+      "types",
+      "validation",
+      "model"
+    ],
+    "aliases": {
+      "shape": [
+        "structure"
+      ],
+      "documents": [
+        "mongo documents"
+      ],
+      "field names": [
+        "fields"
+      ],
+      "types": [
+        "data types"
+      ],
+      "validation": [
+        "validation rules"
+      ],
+      "model": [
+        "mongoose model"
+      ]
+    },
+    "source": "Interview-ready Database/MongoDB theory"
+  },
+  {
+    "id": "database-008",
+    "category": "database",
+    "question": "What is a Mongoose model?",
+    "answer": "A Mongoose model is created from a schema and represents a MongoDB collection. It provides methods to create, find, update, and delete documents. The model is what the app usually uses to interact with the database.",
+    "keywords": [
+      "created from schema",
+      "collection",
+      "create",
+      "find",
+      "update",
+      "delete"
+    ],
+    "aliases": {
+      "created from schema": [
+        "based on schema"
+      ],
+      "collection": [
+        "mongo collection"
+      ],
+      "create": [
+        "insert"
+      ],
+      "find": [
+        "read",
+        "query"
+      ],
+      "update": [
+        "edit"
+      ],
+      "delete": [
+        "remove"
+      ]
+    },
+    "source": "Interview-ready Database/MongoDB theory"
+  },
+  {
+    "id": "database-009",
+    "category": "database",
+    "question": "What is the difference between embedding and referencing data in MongoDB?",
+    "answer": "Embedding stores related data inside the same document. Referencing stores an id to another document and keeps the data separate. Embedding can be simpler and faster for data read together, while referencing is better for large, shared, or frequently changing related data.",
+    "keywords": [
+      "embedding",
+      "same document",
+      "referencing",
+      "id",
+      "separate",
+      "shared data"
+    ],
+    "aliases": {
+      "embedding": [
+        "embed"
+      ],
+      "same document": [
+        "inside document"
+      ],
+      "referencing": [
+        "reference"
+      ],
+      "id": [
+        "ObjectId"
+      ],
+      "separate": [
+        "separate document"
+      ],
+      "shared data": [
+        "reused data"
+      ]
+    },
+    "source": "Interview-ready Database/MongoDB theory"
+  },
+  {
+    "id": "database-010",
+    "category": "database",
+    "question": "What does populate do in Mongoose?",
+    "answer": "populate replaces referenced ObjectId values with the actual related documents from another collection. It is useful when one document stores references to another, but it can add extra database work, so it should be used thoughtfully.",
+    "keywords": [
+      "populate",
+      "referenced ObjectId",
+      "related documents",
+      "another collection",
+      "extra database work"
+    ],
+    "aliases": {
+      "populate": [
+        "mongoose populate"
+      ],
+      "referenced ObjectId": [
+        "reference id"
+      ],
+      "related documents": [
+        "linked documents"
+      ],
+      "another collection": [
+        "other collection"
+      ],
+      "extra database work": [
+        "extra query",
+        "performance cost"
+      ]
+    },
+    "source": "Interview-ready Database/MongoDB theory"
+  },
+  {
+    "id": "database-011",
+    "category": "database",
+    "question": "What is an index in a database?",
+    "answer": "An index is a data structure that helps the database find records faster for certain queries. It improves read performance for indexed fields, but it costs extra storage and can make writes slower because the index also has to be updated.",
+    "keywords": [
+      "data structure",
+      "find records faster",
+      "queries",
+      "read performance",
+      "extra storage",
+      "writes slower"
+    ],
+    "aliases": {
+      "data structure": [
+        "index structure"
+      ],
+      "find records faster": [
+        "faster lookup"
+      ],
+      "queries": [
+        "database queries"
+      ],
+      "read performance": [
+        "faster reads"
+      ],
+      "extra storage": [
+        "storage cost"
+      ],
+      "writes slower": [
+        "slower writes"
+      ]
+    },
+    "source": "Interview-ready Database/MongoDB theory"
+  },
+  {
+    "id": "database-012",
+    "category": "database",
+    "question": "When should you add an index?",
+    "answer": "You should consider an index for fields that are frequently used in filtering, sorting, joining-like lookups, or uniqueness checks. You should not index every field because indexes take space and add write overhead. Good indexes match real query patterns.",
+    "keywords": [
+      "filtering",
+      "sorting",
+      "uniqueness",
+      "not every field",
+      "write overhead",
+      "query patterns"
+    ],
+    "aliases": {
+      "filtering": [
+        "filter"
+      ],
+      "sorting": [
+        "sort"
+      ],
+      "uniqueness": [
+        "unique"
+      ],
+      "not every field": [
+        "do not index everything"
+      ],
+      "write overhead": [
+        "slower writes"
+      ],
+      "query patterns": [
+        "common queries"
+      ]
+    },
+    "source": "Interview-ready Database/MongoDB theory"
+  },
+  {
+    "id": "database-013",
+    "category": "database",
+    "question": "What is database validation and why is it important?",
+    "answer": "Database validation checks that data matches expected rules before it is saved. It can check required fields, data types, lengths, allowed values, and custom rules. Validation protects data quality, but API-level validation is still important too.",
+    "keywords": [
+      "expected rules",
+      "required fields",
+      "data types",
+      "allowed values",
+      "data quality",
+      "API validation"
+    ],
+    "aliases": {
+      "expected rules": [
+        "validation rules"
+      ],
+      "required fields": [
+        "required"
+      ],
+      "data types": [
+        "types"
+      ],
+      "allowed values": [
+        "enum"
+      ],
+      "data quality": [
+        "valid data"
+      ],
+      "API validation": [
+        "request validation"
+      ]
+    },
+    "source": "Interview-ready Database/MongoDB theory"
+  },
+  {
+    "id": "database-014",
+    "category": "database",
+    "question": "What is pagination in database queries?",
+    "answer": "Pagination means returning data in smaller chunks instead of loading everything at once. Common approaches use page and limit, skip and limit, or cursor-based pagination. Pagination improves performance and makes API responses more manageable.",
+    "keywords": [
+      "smaller chunks",
+      "not everything",
+      "page",
+      "limit",
+      "cursor",
+      "performance"
+    ],
+    "aliases": {
+      "smaller chunks": [
+        "chunks",
+        "pages"
+      ],
+      "not everything": [
+        "not all records"
+      ],
+      "page": [
+        "page number"
+      ],
+      "limit": [
+        "page size"
+      ],
+      "cursor": [
+        "cursor-based"
+      ],
+      "performance": [
+        "faster",
+        "manageable"
+      ]
+    },
+    "source": "Interview-ready Database/MongoDB theory"
+  },
+  {
+    "id": "database-015",
+    "category": "database",
+    "question": "What is filtering and sorting in database-backed APIs?",
+    "answer": "Filtering limits results based on conditions, such as category, owner, status, or search text. Sorting controls the order of results, such as newest first or price ascending. APIs often expose filters and sort options through query parameters.",
+    "keywords": [
+      "filtering",
+      "conditions",
+      "sorting",
+      "order",
+      "query parameters"
+    ],
+    "aliases": {
+      "filtering": [
+        "filter"
+      ],
+      "conditions": [
+        "criteria"
+      ],
+      "sorting": [
+        "sort"
+      ],
+      "order": [
+        "ordering"
+      ],
+      "query parameters": [
+        "query params"
+      ]
+    },
+    "source": "Interview-ready Database/MongoDB theory"
+  },
+  {
+    "id": "database-016",
+    "category": "database",
+    "question": "What is aggregation in MongoDB?",
+    "answer": "Aggregation is a way to process documents through a pipeline of stages, such as matching, grouping, sorting, projecting, and calculating values. It is used for reports, statistics, transformations, and more complex queries than a simple find.",
+    "keywords": [
+      "pipeline",
+      "stages",
+      "match",
+      "group",
+      "sort",
+      "statistics"
+    ],
+    "aliases": {
+      "pipeline": [
+        "aggregation pipeline"
+      ],
+      "stages": [
+        "pipeline stages"
+      ],
+      "match": [
+        "$match"
+      ],
+      "group": [
+        "$group"
+      ],
+      "sort": [
+        "$sort"
+      ],
+      "statistics": [
+        "reports",
+        "analytics"
+      ]
+    },
+    "source": "Interview-ready Database/MongoDB theory"
+  },
+  {
+    "id": "database-017",
+    "category": "database",
+    "question": "What is the N+1 query problem?",
+    "answer": "The N+1 query problem happens when code makes one query to get a list and then makes one additional query for each item in that list. It can become very slow as the list grows. Better approaches include batching, population carefully, joins where available, or redesigning the query.",
+    "keywords": [
+      "one query",
+      "list",
+      "additional query",
+      "each item",
+      "slow",
+      "batching"
+    ],
+    "aliases": {
+      "one query": [
+        "initial query"
+      ],
+      "list": [
+        "records"
+      ],
+      "additional query": [
+        "extra query"
+      ],
+      "each item": [
+        "per item"
+      ],
+      "slow": [
+        "performance problem"
+      ],
+      "batching": [
+        "batch"
+      ]
+    },
+    "source": "Interview-ready Database/MongoDB theory"
+  },
+  {
+    "id": "database-018",
+    "category": "database",
+    "question": "Why should database credentials not be hardcoded?",
+    "answer": "Database credentials should not be hardcoded because they are secrets. If committed to Git or exposed in frontend code, attackers can access the database. Credentials should be stored in environment variables or secret managers and only used on the server.",
+    "keywords": [
+      "credentials",
+      "secrets",
+      "Git",
+      "frontend code",
+      "environment variables",
+      "server"
+    ],
+    "aliases": {
+      "credentials": [
+        "database url",
+        "password"
+      ],
+      "secrets": [
+        "secret values"
+      ],
+      "Git": [
+        "repository"
+      ],
+      "frontend code": [
+        "client code"
+      ],
+      "environment variables": [
+        "env vars"
+      ],
+      "server": [
+        "backend"
+      ]
+    },
+    "source": "Interview-ready Database/MongoDB theory"
+  },
+  {
+    "id": "database-019",
+    "category": "database",
+    "question": "What is a database connection string?",
+    "answer": "A database connection string is a URL-like value that tells the app how to connect to a database. It usually includes the database host, credentials, database name, and connection options. It should be treated as a secret when it contains username or password information.",
+    "keywords": [
+      "URL-like",
+      "connect",
+      "host",
+      "credentials",
+      "database name",
+      "secret"
+    ],
+    "aliases": {
+      "URL-like": [
+        "url"
+      ],
+      "connect": [
+        "connection"
+      ],
+      "host": [
+        "server address"
+      ],
+      "credentials": [
+        "username",
+        "password"
+      ],
+      "database name": [
+        "db name"
+      ],
+      "secret": [
+        "sensitive"
+      ]
+    },
+    "source": "Interview-ready Database/MongoDB theory"
+  },
+  {
+    "id": "database-020",
+    "category": "database",
+    "question": "What is the difference between findOne, find, create, updateOne, and deleteOne in Mongoose?",
+    "answer": "findOne returns one matching document or null. find returns an array of matching documents. create inserts a new document. updateOne updates the first matching document. deleteOne deletes the first matching document. These methods map to common CRUD operations.",
+    "keywords": [
+      "findOne",
+      "one document",
+      "find",
+      "array",
+      "create",
+      "updateOne",
+      "deleteOne"
+    ],
+    "aliases": {
+      "findOne": [
+        "find one"
+      ],
+      "one document": [
+        "single document"
+      ],
+      "find": [
+        "find many"
+      ],
+      "array": [
+        "documents array"
+      ],
+      "create": [
+        "insert"
+      ],
+      "updateOne": [
+        "update one"
+      ],
+      "deleteOne": [
+        "delete one"
+      ]
+    },
+    "source": "Interview-ready Database/MongoDB theory"
+  },
+  {
+    "id": "general-dev-001",
+    "category": "general-dev",
+    "question": "What is Git used for?",
+    "answer": "Git is a version control system used to track changes in code over time. It lets developers create commits, use branches, compare changes, revert mistakes, and collaborate without overwriting each other's work.",
+    "keywords": [
+      "version control",
+      "track changes",
+      "commits",
+      "branches",
+      "collaborate"
+    ],
+    "aliases": {
+      "version control": [
+        "vcs"
+      ],
+      "track changes": [
+        "history"
+      ],
+      "commits": [
+        "commit history"
+      ],
+      "branches": [
+        "branching"
+      ],
+      "collaborate": [
+        "team work"
+      ]
+    },
+    "source": "Interview-ready General Dev theory"
+  },
+  {
+    "id": "general-dev-002",
+    "category": "general-dev",
+    "question": "What is the difference between git fetch and git pull?",
+    "answer": "git fetch downloads updates from the remote repository but does not merge them into your current branch. git pull does fetch plus merge or rebase, depending on configuration. Fetch is useful when you want to inspect changes before applying them.",
+    "keywords": [
+      "git fetch",
+      "downloads updates",
+      "does not merge",
+      "git pull",
+      "merge",
+      "inspect"
+    ],
+    "aliases": {
+      "git fetch": [
+        "fetch"
+      ],
+      "downloads updates": [
+        "gets remote changes"
+      ],
+      "does not merge": [
+        "does not apply"
+      ],
+      "git pull": [
+        "pull"
+      ],
+      "merge": [
+        "apply changes"
+      ],
+      "inspect": [
+        "review first"
+      ]
+    },
+    "source": "Interview-ready General Dev theory"
+  },
+  {
+    "id": "general-dev-003",
+    "category": "general-dev",
+    "question": "What is the difference between merge and rebase in Git?",
+    "answer": "Merge combines histories by creating a merge commit when needed, preserving the branch structure. Rebase moves your commits on top of another branch, creating a cleaner linear history. Rebase rewrites commit history, so it should be used carefully on shared branches.",
+    "keywords": [
+      "merge",
+      "merge commit",
+      "preserving history",
+      "rebase",
+      "linear history",
+      "rewrites"
+    ],
+    "aliases": {
+      "merge": [
+        "git merge"
+      ],
+      "merge commit": [
+        "merge commit"
+      ],
+      "preserving history": [
+        "branch history"
+      ],
+      "rebase": [
+        "git rebase"
+      ],
+      "linear history": [
+        "clean history"
+      ],
+      "rewrites": [
+        "rewrites history"
+      ]
+    },
+    "source": "Interview-ready General Dev theory"
+  },
+  {
+    "id": "general-dev-004",
+    "category": "general-dev",
+    "question": "What is a merge conflict?",
+    "answer": "A merge conflict happens when Git cannot automatically combine changes from different branches. This usually happens when the same lines or nearby parts of a file were changed differently. A developer must choose or edit the final version, then commit the resolution.",
+    "keywords": [
+      "cannot automatically combine",
+      "different branches",
+      "same lines",
+      "choose",
+      "commit resolution"
+    ],
+    "aliases": {
+      "cannot automatically combine": [
+        "conflict"
+      ],
+      "different branches": [
+        "branches"
+      ],
+      "same lines": [
+        "same file"
+      ],
+      "choose": [
+        "resolve"
+      ],
+      "commit resolution": [
+        "commit resolved conflict"
+      ]
+    },
+    "source": "Interview-ready General Dev theory"
+  },
+  {
+    "id": "general-dev-005",
+    "category": "general-dev",
+    "question": "What is a pull request?",
+    "answer": "A pull request is a request to merge changes from one branch into another. It gives the team a place to review code, discuss changes, run automated checks, request fixes, and approve the work before merging.",
+    "keywords": [
+      "merge changes",
+      "branch",
+      "review code",
+      "automated checks",
+      "approve"
+    ],
+    "aliases": {
+      "merge changes": [
+        "merge"
+      ],
+      "branch": [
+        "source branch",
+        "target branch"
+      ],
+      "review code": [
+        "code review"
+      ],
+      "automated checks": [
+        "ci checks"
+      ],
+      "approve": [
+        "approval"
+      ]
+    },
+    "source": "Interview-ready General Dev theory"
+  },
+  {
+    "id": "general-dev-006",
+    "category": "general-dev",
+    "question": "What makes a good commit message?",
+    "answer": "A good commit message clearly explains what changed and, when useful, why it changed. It should be specific enough to understand the purpose later. Good messages help code review, debugging, and project history.",
+    "keywords": [
+      "what changed",
+      "why",
+      "specific",
+      "code review",
+      "project history"
+    ],
+    "aliases": {
+      "what changed": [
+        "change"
+      ],
+      "why": [
+        "reason"
+      ],
+      "specific": [
+        "clear"
+      ],
+      "code review": [
+        "review"
+      ],
+      "project history": [
+        "git history"
+      ]
+    },
+    "source": "Interview-ready General Dev theory"
+  },
+  {
+    "id": "general-dev-007",
+    "category": "general-dev",
+    "question": "What is code review for?",
+    "answer": "Code review is used to catch bugs, improve readability, check maintainability, share knowledge, and make sure changes fit project standards. It is not just for finding mistakes; it also helps the team keep code consistent.",
+    "keywords": [
+      "catch bugs",
+      "readability",
+      "maintainability",
+      "share knowledge",
+      "standards"
+    ],
+    "aliases": {
+      "catch bugs": [
+        "find bugs"
+      ],
+      "readability": [
+        "readable code"
+      ],
+      "maintainability": [
+        "maintainable"
+      ],
+      "share knowledge": [
+        "knowledge sharing"
+      ],
+      "standards": [
+        "code standards"
+      ]
+    },
+    "source": "Interview-ready General Dev theory"
+  },
+  {
+    "id": "general-dev-008",
+    "category": "general-dev",
+    "question": "What is the difference between unit, integration, and end-to-end tests?",
+    "answer": "Unit tests check small isolated pieces of code. Integration tests check how multiple pieces work together. End-to-end tests simulate real user flows through the app, often in a browser. They cover different levels of confidence and cost.",
+    "keywords": [
+      "unit tests",
+      "isolated",
+      "integration tests",
+      "work together",
+      "end-to-end",
+      "user flows"
+    ],
+    "aliases": {
+      "unit tests": [
+        "unit test"
+      ],
+      "isolated": [
+        "single function"
+      ],
+      "integration tests": [
+        "integration test"
+      ],
+      "work together": [
+        "multiple pieces"
+      ],
+      "end-to-end": [
+        "e2e"
+      ],
+      "user flows": [
+        "real user flow"
+      ]
+    },
+    "source": "Interview-ready General Dev theory"
+  },
+  {
+    "id": "general-dev-009",
+    "category": "general-dev",
+    "question": "What should you usually test in a React component?",
+    "answer": "You usually test what the user can see and do: rendered text, buttons, form behavior, loading states, error states, and important interactions. Tests should avoid depending too much on internal implementation details.",
+    "keywords": [
+      "user can see",
+      "interactions",
+      "forms",
+      "loading states",
+      "error states",
+      "implementation details"
+    ],
+    "aliases": {
+      "user can see": [
+        "visible output"
+      ],
+      "interactions": [
+        "user actions"
+      ],
+      "forms": [
+        "form behavior"
+      ],
+      "loading states": [
+        "loading"
+      ],
+      "error states": [
+        "errors"
+      ],
+      "implementation details": [
+        "internal details"
+      ]
+    },
+    "source": "Interview-ready General Dev theory"
+  },
+  {
+    "id": "general-dev-010",
+    "category": "general-dev",
+    "question": "What is mocking in tests?",
+    "answer": "Mocking means replacing a real dependency with a fake controlled version during a test. It is used to avoid real network calls, database writes, timers, or third-party services, and to test how code behaves in specific situations.",
+    "keywords": [
+      "fake dependency",
+      "controlled",
+      "network calls",
+      "database",
+      "third-party services"
+    ],
+    "aliases": {
+      "fake dependency": [
+        "mock"
+      ],
+      "controlled": [
+        "controlled fake"
+      ],
+      "network calls": [
+        "api calls"
+      ],
+      "database": [
+        "db"
+      ],
+      "third-party services": [
+        "external services"
+      ]
+    },
+    "source": "Interview-ready General Dev theory"
+  },
+  {
+    "id": "general-dev-011",
+    "category": "general-dev",
+    "question": "What is CI/CD?",
+    "answer": "CI/CD means continuous integration and continuous delivery or deployment. CI automatically runs checks like tests, linting, and builds when code changes. CD automates preparing or deploying the app after those checks pass.",
+    "keywords": [
+      "continuous integration",
+      "continuous delivery",
+      "tests",
+      "linting",
+      "builds",
+      "deployment"
+    ],
+    "aliases": {
+      "continuous integration": [
+        "ci"
+      ],
+      "continuous delivery": [
+        "cd",
+        "continuous deployment"
+      ],
+      "tests": [
+        "automated tests"
+      ],
+      "linting": [
+        "lint"
+      ],
+      "builds": [
+        "build"
+      ],
+      "deployment": [
+        "deploy"
+      ]
+    },
+    "source": "Interview-ready General Dev theory"
+  },
+  {
+    "id": "general-dev-012",
+    "category": "general-dev",
+    "question": "What is the difference between development, staging, and production environments?",
+    "answer": "Development is where developers build and test changes locally or in a dev environment. Staging is a production-like environment used to test before release. Production is the live environment used by real users. Each environment usually has different config and data.",
+    "keywords": [
+      "development",
+      "staging",
+      "production",
+      "production-like",
+      "real users",
+      "config"
+    ],
+    "aliases": {
+      "development": [
+        "dev"
+      ],
+      "staging": [
+        "stage"
+      ],
+      "production": [
+        "prod",
+        "live"
+      ],
+      "production-like": [
+        "like production"
+      ],
+      "real users": [
+        "users"
+      ],
+      "config": [
+        "configuration"
+      ]
+    },
+    "source": "Interview-ready General Dev theory"
+  },
+  {
+    "id": "general-dev-013",
+    "category": "general-dev",
+    "question": "What is the difference between npm run dev and npm run build?",
+    "answer": "npm run dev usually starts a development server with fast rebuilds, hot reload, and debugging-friendly behavior. npm run build creates an optimized production build that can be deployed. The dev server is not the same thing as the production output.",
+    "keywords": [
+      "development server",
+      "hot reload",
+      "debugging",
+      "production build",
+      "optimized",
+      "deployed"
+    ],
+    "aliases": {
+      "development server": [
+        "dev server"
+      ],
+      "hot reload": [
+        "hmr"
+      ],
+      "debugging": [
+        "debug"
+      ],
+      "production build": [
+        "build"
+      ],
+      "optimized": [
+        "minified"
+      ],
+      "deployed": [
+        "deploy"
+      ]
+    },
+    "source": "Interview-ready General Dev theory"
+  },
+  {
+    "id": "general-dev-014",
+    "category": "general-dev",
+    "question": "What is linting?",
+    "answer": "Linting is static analysis that checks code for possible bugs, style issues, bad patterns, or rule violations before the code runs. Tools like ESLint help teams keep code consistent and catch problems early.",
+    "keywords": [
+      "static analysis",
+      "bugs",
+      "style issues",
+      "bad patterns",
+      "ESLint",
+      "consistent"
+    ],
+    "aliases": {
+      "static analysis": [
+        "checks code"
+      ],
+      "bugs": [
+        "possible bugs"
+      ],
+      "style issues": [
+        "style"
+      ],
+      "bad patterns": [
+        "anti patterns"
+      ],
+      "ESLint": [
+        "eslint"
+      ],
+      "consistent": [
+        "consistency"
+      ]
+    },
+    "source": "Interview-ready General Dev theory"
+  },
+  {
+    "id": "general-dev-015",
+    "category": "general-dev",
+    "question": "What is formatting and how is it different from linting?",
+    "answer": "Formatting controls how code looks, such as indentation, quotes, spacing, and line breaks. Linting checks code quality rules and possible problems. Formatters like Prettier focus on style, while linters like ESLint can catch patterns that may cause bugs.",
+    "keywords": [
+      "how code looks",
+      "indentation",
+      "Prettier",
+      "linting",
+      "code quality",
+      "bugs"
+    ],
+    "aliases": {
+      "how code looks": [
+        "format"
+      ],
+      "indentation": [
+        "spacing"
+      ],
+      "Prettier": [
+        "formatter"
+      ],
+      "linting": [
+        "lint"
+      ],
+      "code quality": [
+        "quality rules"
+      ],
+      "bugs": [
+        "possible bugs"
+      ]
+    },
+    "source": "Interview-ready General Dev theory"
+  },
+  {
+    "id": "general-dev-016",
+    "category": "general-dev",
+    "question": "What is XSS?",
+    "answer": "XSS, or Cross-Site Scripting, is a security vulnerability where attacker-controlled script runs in another user's browser. It can happen when an app renders untrusted input as HTML or script. Defenses include escaping output, sanitizing HTML, avoiding dangerous HTML APIs, and using security headers.",
+    "keywords": [
+      "Cross-Site Scripting",
+      "attacker script",
+      "browser",
+      "untrusted input",
+      "escaping",
+      "sanitizing"
+    ],
+    "aliases": {
+      "Cross-Site Scripting": [
+        "xss"
+      ],
+      "attacker script": [
+        "malicious script"
+      ],
+      "browser": [
+        "user browser"
+      ],
+      "untrusted input": [
+        "user input"
+      ],
+      "escaping": [
+        "escape output"
+      ],
+      "sanitizing": [
+        "sanitize"
+      ]
+    },
+    "source": "Interview-ready General Dev theory"
+  },
+  {
+    "id": "general-dev-017",
+    "category": "general-dev",
+    "question": "What is CSRF?",
+    "answer": "CSRF, or Cross-Site Request Forgery, is an attack where a malicious site tricks a user's browser into sending an unwanted request to another site where the user is already authenticated. Defenses include SameSite cookies, CSRF tokens, and checking request origin.",
+    "keywords": [
+      "Cross-Site Request Forgery",
+      "malicious site",
+      "authenticated",
+      "unwanted request",
+      "SameSite",
+      "CSRF token"
+    ],
+    "aliases": {
+      "Cross-Site Request Forgery": [
+        "csrf"
+      ],
+      "malicious site": [
+        "attacker site"
+      ],
+      "authenticated": [
+        "logged in"
+      ],
+      "unwanted request": [
+        "forged request"
+      ],
+      "SameSite": [
+        "same site cookies"
+      ],
+      "CSRF token": [
+        "csrf tokens"
+      ]
+    },
+    "source": "Interview-ready General Dev theory"
+  },
+  {
+    "id": "general-dev-018",
+    "category": "general-dev",
+    "question": "What is injection in web security?",
+    "answer": "Injection happens when untrusted input is treated as code or a command by a system. SQL injection is the classic example, but NoSQL injection and command injection also exist. Defenses include validation, parameterized queries, escaping, and avoiding direct string-building for queries.",
+    "keywords": [
+      "untrusted input",
+      "code",
+      "SQL injection",
+      "NoSQL injection",
+      "validation",
+      "parameterized queries"
+    ],
+    "aliases": {
+      "untrusted input": [
+        "user input"
+      ],
+      "code": [
+        "command"
+      ],
+      "SQL injection": [
+        "sqli"
+      ],
+      "NoSQL injection": [
+        "nosql injection"
+      ],
+      "validation": [
+        "validate input"
+      ],
+      "parameterized queries": [
+        "prepared statements"
+      ]
+    },
+    "source": "Interview-ready General Dev theory"
+  },
+  {
+    "id": "general-dev-019",
+    "category": "general-dev",
+    "question": "Why should secrets never be committed to Git?",
+    "answer": "Secrets like API keys, tokens, database URLs, and private credentials can be stolen if committed to Git, especially in public repositories. Even if removed later, they may remain in Git history. Secrets should be stored in environment variables or secret managers and rotated if leaked.",
+    "keywords": [
+      "API keys",
+      "tokens",
+      "database URLs",
+      "public repositories",
+      "Git history",
+      "environment variables"
+    ],
+    "aliases": {
+      "API keys": [
+        "api key"
+      ],
+      "tokens": [
+        "access tokens"
+      ],
+      "database URLs": [
+        "connection strings"
+      ],
+      "public repositories": [
+        "public repo"
+      ],
+      "Git history": [
+        "commit history"
+      ],
+      "environment variables": [
+        "env vars"
+      ]
+    },
+    "source": "Interview-ready General Dev theory"
+  },
+  {
+    "id": "general-dev-020",
+    "category": "general-dev",
+    "question": "What is the principle of least privilege?",
+    "answer": "The principle of least privilege means giving users, services, or tokens only the permissions they need to do their job and nothing extra. It limits damage if an account, token, or service is compromised.",
+    "keywords": [
+      "only permissions needed",
+      "nothing extra",
+      "users",
+      "services",
+      "tokens",
+      "limits damage"
+    ],
+    "aliases": {
+      "only permissions needed": [
+        "minimum permissions"
+      ],
+      "nothing extra": [
+        "least privilege"
+      ],
+      "users": [
+        "user accounts"
+      ],
+      "services": [
+        "service account"
+      ],
+      "tokens": [
+        "api tokens"
+      ],
+      "limits damage": [
+        "reduce impact"
+      ]
+    },
+    "source": "Interview-ready General Dev theory"
+  },
+  {
+    "id": "general-dev-021",
+    "category": "general-dev",
+    "question": "What is logging used for in applications?",
+    "answer": "Logging records useful information about what the app is doing, such as errors, warnings, requests, important actions, and debugging details. Good logs help with debugging and monitoring, but they should not expose sensitive data like passwords or tokens.",
+    "keywords": [
+      "errors",
+      "warnings",
+      "requests",
+      "debugging",
+      "monitoring",
+      "sensitive data"
+    ],
+    "aliases": {
+      "errors": [
+        "error logs"
+      ],
+      "warnings": [
+        "warn logs"
+      ],
+      "requests": [
+        "request logs"
+      ],
+      "debugging": [
+        "debug"
+      ],
+      "monitoring": [
+        "observability"
+      ],
+      "sensitive data": [
+        "secrets",
+        "passwords",
+        "tokens"
+      ]
+    },
+    "source": "Interview-ready General Dev theory"
+  },
+  {
+    "id": "general-dev-022",
+    "category": "general-dev",
+    "question": "What is monitoring?",
+    "answer": "Monitoring means tracking an application's health and behavior in real time or over time. It can include uptime, errors, performance, logs, resource usage, and alerts. Monitoring helps teams notice problems before or soon after users are affected.",
+    "keywords": [
+      "health",
+      "uptime",
+      "errors",
+      "performance",
+      "alerts",
+      "users affected"
+    ],
+    "aliases": {
+      "health": [
+        "app health"
+      ],
+      "uptime": [
+        "availability"
+      ],
+      "errors": [
+        "error rate"
+      ],
+      "performance": [
+        "speed"
+      ],
+      "alerts": [
+        "notifications"
+      ],
+      "users affected": [
+        "impact"
+      ]
+    },
+    "source": "Interview-ready General Dev theory"
+  },
+  {
+    "id": "general-dev-023",
+    "category": "general-dev",
+    "question": "What is technical debt?",
+    "answer": "Technical debt is the future cost created by shortcuts, messy code, missing tests, poor architecture, or rushed decisions. Some debt is intentional and acceptable short term, but unmanaged debt slows development and makes bugs more likely.",
+    "keywords": [
+      "future cost",
+      "shortcuts",
+      "messy code",
+      "missing tests",
+      "rushed decisions",
+      "slows development"
+    ],
+    "aliases": {
+      "future cost": [
+        "cost later"
+      ],
+      "shortcuts": [
+        "quick fix"
+      ],
+      "messy code": [
+        "bad code"
+      ],
+      "missing tests": [
+        "no tests"
+      ],
+      "rushed decisions": [
+        "rush"
+      ],
+      "slows development": [
+        "slower work"
+      ]
+    },
+    "source": "Interview-ready General Dev theory"
+  },
+  {
+    "id": "general-dev-024",
+    "category": "general-dev",
+    "question": "What is the difference between refactoring and rewriting?",
+    "answer": "Refactoring means improving the internal structure of code without changing its external behavior. Rewriting means replacing a larger part of the system with a new implementation. Refactoring is usually smaller and safer, while rewriting can be riskier and more expensive.",
+    "keywords": [
+      "internal structure",
+      "same behavior",
+      "rewriting",
+      "new implementation",
+      "riskier"
+    ],
+    "aliases": {
+      "internal structure": [
+        "code structure"
+      ],
+      "same behavior": [
+        "external behavior unchanged"
+      ],
+      "rewriting": [
+        "rewrite"
+      ],
+      "new implementation": [
+        "new version"
+      ],
+      "riskier": [
+        "more risk"
+      ]
+    },
+    "source": "Interview-ready General Dev theory"
+  },
+  {
+    "id": "general-dev-025",
+    "category": "general-dev",
+    "question": "What does maintainable code mean?",
+    "answer": "Maintainable code is code that is understandable, organized, testable, and easy to change without breaking unrelated behavior. It usually has clear names, reasonable structure, small focused functions or components, useful tests, and avoids unnecessary complexity.",
+    "keywords": [
+      "understandable",
+      "organized",
+      "testable",
+      "easy to change",
+      "clear names",
+      "small focused"
+    ],
+    "aliases": {
+      "understandable": [
+        "readable"
+      ],
+      "organized": [
+        "structured"
+      ],
+      "testable": [
+        "easy to test"
+      ],
+      "easy to change": [
+        "modifiable"
+      ],
+      "clear names": [
+        "naming"
+      ],
+      "small focused": [
+        "small functions",
+        "focused components"
+      ]
+    },
+    "source": "Interview-ready General Dev theory"
+  },
 ];
