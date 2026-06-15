@@ -7,16 +7,19 @@ import { SessionControls } from './components/SessionControls';
 import { StatsPanel } from './components/StatsPanel';
 import { cards } from './data/cards';
 import { getCategoryLabel, sessionCategories } from './data/categories';
+import { extraCards } from './data/extraCards';
 import type { AnswerHistoryItem, Flashcard, PracticeSessionItem, ProgressMap, ResultKind, ScoreResult, SessionCategory, SessionResult } from './types';
 import { scoreAnswer } from './utils/scoring';
 import { buildSessionDeck } from './utils/session';
 import { addHistoryItem, addPracticeSession, clearSavedPractice, loadHistory, loadPracticeSessions, loadProgress, updateCardProgress } from './utils/storage';
 
+const allCards = [...cards, ...extraCards];
+
 function getCardCounts(): Record<SessionCategory, number> {
   const counts = {} as Record<SessionCategory, number>;
 
   for (const category of sessionCategories) {
-    counts[category.id] = category.id === 'mixed' ? cards.length : cards.filter((card) => card.category === category.id).length;
+    counts[category.id] = category.id === 'mixed' ? allCards.length : allCards.filter((card) => card.category === category.id).length;
   }
 
   return counts;
@@ -53,7 +56,7 @@ export default function App() {
   }
 
   function startSession(category: SessionCategory) {
-    const newDeck = buildSessionDeck(cards, category, progress);
+    const newDeck = buildSessionDeck(allCards, category, progress);
     setSelectedCategory(category);
     setSessionDeck(newDeck);
     setCurrentIndex(0);
@@ -132,7 +135,7 @@ export default function App() {
       <main className="app-shell">
         <PracticeTimer onSessionSaved={savePracticeTime} />
         <CategorySelect cardCounts={cardCounts} onStart={startSession} />
-        <StatsPanel cards={cards} progress={progress} history={history} practiceSessions={practiceSessions} onReset={resetStats} />
+        <StatsPanel cards={allCards} progress={progress} history={history} practiceSessions={practiceSessions} onReset={resetStats} />
       </main>
     );
   }
@@ -154,7 +157,7 @@ export default function App() {
             </button>
           </div>
         </section>
-        <StatsPanel cards={cards} progress={progress} history={history} practiceSessions={practiceSessions} onReset={resetStats} />
+        <StatsPanel cards={allCards} progress={progress} history={history} practiceSessions={practiceSessions} onReset={resetStats} />
       </main>
     );
   }
@@ -198,7 +201,7 @@ export default function App() {
         />
       </section>
 
-      <StatsPanel cards={cards} progress={progress} history={history} practiceSessions={practiceSessions} onReset={resetStats} />
+      <StatsPanel cards={allCards} progress={progress} history={history} practiceSessions={practiceSessions} onReset={resetStats} />
     </main>
   );
 }
