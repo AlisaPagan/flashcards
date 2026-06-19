@@ -8,10 +8,21 @@ import { StatsPanel } from './components/StatsPanel';
 import { cards } from './data/cards';
 import { getCategoryLabel, sessionCategories } from './data/categories';
 import { extraCards } from './data/extraCards';
-import type { AnswerHistoryItem, Flashcard, PracticeSessionItem, ProgressMap, ResultKind, ScoreResult, SessionCategory, SessionResult } from './types';
+import type { AnswerHistoryItem, Flashcard, PracticeLogItem, PracticeSessionItem, ProgressMap, ResultKind, ScoreResult, SessionCategory, SessionResult } from './types';
 import { scoreAnswer } from './utils/scoring';
 import { buildSessionDeck } from './utils/session';
-import { addHistoryItem, addPracticeSession, clearSavedPractice, loadHistory, loadPracticeSessions, loadProgress, updateCardProgress } from './utils/storage';
+import {
+  addCurrentPracticeLogItem,
+  addHistoryItem,
+  addPracticeSession,
+  clearCurrentPracticeLog,
+  clearSavedPractice,
+  loadCurrentPracticeLog,
+  loadHistory,
+  loadPracticeSessions,
+  loadProgress,
+  updateCardProgress,
+} from './utils/storage';
 
 const allCards = [...cards, ...extraCards];
 
@@ -33,6 +44,7 @@ export default function App() {
   const [progress, setProgress] = useState<ProgressMap>(() => loadProgress());
   const [history, setHistory] = useState<AnswerHistoryItem[]>(() => loadHistory());
   const [practiceSessions, setPracticeSessions] = useState<PracticeSessionItem[]>(() => loadPracticeSessions());
+  const [currentPracticeLog, setCurrentPracticeLog] = useState<PracticeLogItem[]>(() => loadCurrentPracticeLog());
   const [selectedCategory, setSelectedCategory] = useState<SessionCategory | null>(null);
   const [sessionDeck, setSessionDeck] = useState<Flashcard[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -92,6 +104,19 @@ export default function App() {
     const nextProgress = updateCardProgress(progress, currentCard.id, result);
     setProgress(nextProgress);
 
+    const nextPracticeLog = addCurrentPracticeLogItem({
+      cardId: currentCard.id,
+      category: currentCard.category,
+      question: currentCard.question,
+      officialAnswer: currentCard.answer,
+      userAnswer: result === 'skipped' ? '' : answer,
+      finalResult: result,
+      autoScore: result === 'skipped' ? null : autoScore.score,
+      matchedKeywords: result === 'skipped' ? [] : autoScore.matched,
+      missingKeywords: result === 'skipped' ? [] : autoScore.missing,
+    });
+    setCurrentPracticeLog(nextPracticeLog);
+
     if (result !== 'skipped') {
       const nextHistory = addHistoryItem({
         cardId: currentCard.id,
@@ -122,6 +147,14 @@ export default function App() {
     setPracticeSessions([]);
   }
 
+  function clearPracticeLog() {
+    const confirmed = window.confirm('Clear the current practice log? Your stats and answer history will be kept.');
+    if (!confirmed) return;
+
+    clearCurrentPracticeLog();
+    setCurrentPracticeLog([]);
+  }
+
   function backToCategories() {
     setSelectedCategory(null);
     setSessionDeck([]);
@@ -135,7 +168,7 @@ export default function App() {
       <main className="app-shell">
         <PracticeTimer onSessionSaved={savePracticeTime} />
         <CategorySelect cardCounts={cardCounts} onStart={startSession} />
-        <StatsPanel cards={allCards} progress={progress} history={history} practiceSessions={practiceSessions} onReset={resetStats} />
+        <StatsPanel cards={allCards} progress={progress} history={history} practiceSessions={practiceSessions} currentPracticeLog={currentPracticeLog} onClearCurrentPracticeLog={clearPracticeLog} onReset={resetStats} />
       </main>
     );
   }
@@ -157,7 +190,7 @@ export default function App() {
             </button>
           </div>
         </section>
-        <StatsPanel cards={allCards} progress={progress} history={history} practiceSessions={practiceSessions} onReset={resetStats} />
+        <StatsPanel cards={allCards} progress={progress} history={history} practiceSessions={practiceSessions} currentPracticeLog={currentPracticeLog} onClearCurrentPracticeLog={clearPracticeLog} onReset={resetStats} />
       </main>
     );
   }
@@ -201,7 +234,7 @@ export default function App() {
         />
       </section>
 
-      <StatsPanel cards={allCards} progress={progress} history={history} practiceSessions={practiceSessions} onReset={resetStats} />
+      <StatsPanel cards={allCards} progress={progress} history={history} practiceSessions={practiceSessions} currentPracticeLog={currentPracticeLog} onClearCurrentPracticeLog={clearPracticeLog} onReset={resetStats} />
     </main>
   );
 }

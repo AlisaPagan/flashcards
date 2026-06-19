@@ -65,6 +65,22 @@ export type AnswerHistoryItem = {
   createdAt: string;
 };
 
+export type PracticeLogItem = {
+  id: string;
+  cardId: string;
+  category: CategoryId;
+  question: string;
+  officialAnswer: string;
+  userAnswer: string;
+  finalResult: ResultKind;
+  autoScore: number | null;
+  matchedKeywords: string[];
+  missingKeywords: string[];
+  createdAt: string;
+};
+
+export type PracticeLogDraft = Omit<PracticeLogItem, 'id' | 'createdAt'>;
+
 
 export type PracticeSessionItem = {
   id: string;

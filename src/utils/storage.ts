@@ -1,8 +1,9 @@
-import type { AnswerHistoryItem, CardProgress, PracticeSessionItem, ProgressMap, ResultKind } from '../types';
+import type { AnswerHistoryItem, CardProgress, PracticeLogDraft, PracticeLogItem, PracticeSessionItem, ProgressMap, ResultKind } from '../types';
 
 const PROGRESS_KEY = 'interview-flashcards-progress';
 const HISTORY_KEY = 'interview-flashcards-history';
 const PRACTICE_SESSIONS_KEY = 'interview-flashcards-practice-sessions';
+const CURRENT_PRACTICE_LOG_KEY = 'interview-flashcards-current-practice-log';
 
 export function loadProgress(): ProgressMap {
   try {
@@ -66,6 +67,34 @@ export function addHistoryItem(item: Omit<AnswerHistoryItem, 'id' | 'createdAt'>
   const updated = [nextItem, ...history].slice(0, 100);
   saveHistory(updated);
   return updated;
+}
+
+export function loadCurrentPracticeLog(): PracticeLogItem[] {
+  try {
+    const saved = localStorage.getItem(CURRENT_PRACTICE_LOG_KEY);
+    return saved ? JSON.parse(saved) : [];
+  } catch {
+    return [];
+  }
+}
+
+export function saveCurrentPracticeLog(log: PracticeLogItem[]): void {
+  localStorage.setItem(CURRENT_PRACTICE_LOG_KEY, JSON.stringify(log));
+}
+
+export function addCurrentPracticeLogItem(item: PracticeLogDraft): PracticeLogItem[] {
+  const nextItem: PracticeLogItem = {
+    ...item,
+    id: `${Date.now()}-${Math.random().toString(16).slice(2)}`,
+    createdAt: new Date().toISOString(),
+  };
+  const updated = [nextItem, ...loadCurrentPracticeLog()];
+  saveCurrentPracticeLog(updated);
+  return updated;
+}
+
+export function clearCurrentPracticeLog(): void {
+  localStorage.removeItem(CURRENT_PRACTICE_LOG_KEY);
 }
 
 export function loadPracticeSessions(): PracticeSessionItem[] {
