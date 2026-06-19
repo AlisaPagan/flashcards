@@ -31,6 +31,9 @@ npm run build
 * Manual Start / Stop practice timer
 * Stats and saved timer blocks in `localStorage`
 * Failed, partial, and skipped cards appear more often in later sessions
+* Full current practice log modal
+* CSV download for practiced questions
+* Clearable practice log that does not reset all-time stats
 
 ## Categories
 
@@ -78,6 +81,25 @@ Each card looks like this:
   },
 }
 ```
+
+## Current Practice Log
+
+The app has a current practice log for exporting study sessions.
+
+A log item is saved when a card is marked as:
+
+* `I was right`
+* `Almost / partial`
+* `I was wrong`
+* `Skip`
+
+The practice log includes the question, official answer, typed answer, result, score, matched keywords, missing keywords, category, and date.
+
+The practice log can be viewed in the app and downloaded as a CSV file. The CSV can be opened in Excel or Google Sheets.
+
+The practice log keeps accumulating until it is cleared manually.
+
+Clearing the practice log only clears the export list. It does **not** reset all-time stats, weak-card tracking, answer history, or timer history.
 
 ## Dictation note
 
